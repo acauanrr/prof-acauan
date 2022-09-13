@@ -51,7 +51,7 @@ export default function Header(props) {
         />
       </Flex>
 
-      <Box display={{ base: "block", md: "none" }} onClick={toggleMenu}>
+      <Box display={{ base: "block", md: "none" }} onClick={toggleMenu} pr={5}>
         {show ? <CloseIcon /> : <HamburgerIcon w={7} h={7} />}
       </Box>
 
