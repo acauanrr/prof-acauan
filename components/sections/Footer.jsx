@@ -5,23 +5,17 @@ export default function Footer() {
   return (
     <Flex
       w="100%"
-      mt={10}
       alignItems="center"
       justifyContent="center"
       flexDir="column"
-      bg="primary.800"
-      py={10}
+      bg="paletaCool.bg"
+      py={5}
     >
-      <Heading as="h5" size="sm" color="gray.300">
-        Prof. Acauan Ribeiro
+      <Heading as="h5" size="xs" color="gray.300">
+        acauan.ribeiro@ufrr.br
       </Heading>
-      <HStack>
-        <Icon color="gray.300" as={MdOutlineEmail} />
-        <Heading as="h5" size="sm" color="gray.300">
-          acauan.ribeiro@ufrr.br
-        </Heading>
-      </HStack>
-      <Heading as="h5" size="sm" color="gray.300">
+
+      <Heading as="h5" size="xs" color="gray.300">
         2022
       </Heading>
     </Flex>

@@ -26,19 +26,26 @@ import {
 export default function Ensino() {
   return (
     <Flex
-      align="center"
-      justify={{ base: "center", md: "space-around", xl: "space-between" }}
+      justifyContent="center"
       direction={{ base: "column-reverse", md: "row" }}
       wrap="no-wrap"
-      p={8}
-      mb={10}
+      mb={2}
+      minW="full"
     >
-      <VStack>
+      <Stack
+        minW="80%"
+        spacing={4}
+        border="2px"
+        borderStyle="dashed"
+        borderColor="gray.200"
+        py={{ base: 2, md: 4 }}
+        px={{ base: 4, md: 8 }}
+      >
         <Heading>Ensino</Heading>
         <Text fontSize="md" color="primary.800">
           Disciplinas ministradas na UFRR.
         </Text>
-        <Box w="100%" mb={{ base: 4, md: 0 }}>
+        <Box mb={{ base: 4, md: 0 }}>
           <Tabs>
             <TabList>
               <Tab>2022</Tab>
@@ -108,7 +115,7 @@ export default function Ensino() {
             </TabPanels>
           </Tabs>
         </Box>
-      </VStack>
+      </Stack>
     </Flex>
   );
 }

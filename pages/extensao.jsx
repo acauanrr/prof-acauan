@@ -1,24 +1,68 @@
-import { Flex, Heading, Stack, Text } from "@chakra-ui/react";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
+import {
+  Box,
+  Divider,
+  Flex,
+  Heading,
+  HStack,
+  Stack,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
+import Link from "next/link";
 
-export default function Ensino() {
+export default function Extensao() {
   return (
     <Flex
-      align="center"
-      justify={{ base: "center", md: "space-around", xl: "space-between" }}
+      justifyContent="center"
       direction={{ base: "column-reverse", md: "row" }}
       wrap="no-wrap"
-      p={8}
-      mb={10}
+      mb={2}
+      minW="full"
     >
-      <Stack spacing={2}>
-        <Heading alignSelf="left">Projetos de Extensão</Heading>
-        <Text fontSize="md">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus aut
-          temporibus quidem? Odit hic commodi accusantium soluta doloremque eius
-          qui magnam sint. Nihil quis, assumenda cumque id repellendus at est
-          saepe voluptates magni iure, ipsam atque ad doloribus cupiditate
-          ipsum!
+      <Stack
+        minW="80%"
+        spacing={4}
+        border="2px"
+        borderStyle="dashed"
+        borderColor="gray.200"
+        py={{ base: 2, md: 4 }}
+        px={{ base: 4, md: 8 }}
+      >
+        <Heading>Extensão</Heading>
+        <Text fontSize="md" color="primary.800">
+          Projetos de extensão que participo
         </Text>
+
+        <Box>
+          <Link href="#">
+            <a>
+              <Box
+                as="button"
+                display="flex"
+                colorScheme="teal"
+                variant="outline"
+                size="md"
+                py={2}
+                px={4}
+                borderWidth="1px"
+                rounded="md"
+                _hover={{ bg: "gray.200" }}
+                _focus={{ boxShadow: "outline" }}
+              >
+                <ExternalLinkIcon color="primary.800" />
+                <VStack alignItems="flex-start" pl={1}>
+                  <Heading as="h5" size="sm" color="primary.800">
+                    JCC 2022
+                  </Heading>
+                  <Text fontSize="xs">
+                    Jornada Ciêntífica da Computação - DCC - UFRR
+                  </Text>
+                </VStack>
+              </Box>
+            </a>
+          </Link>
+        </Box>
       </Stack>
     </Flex>
   );

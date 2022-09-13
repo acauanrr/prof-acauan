@@ -1,21 +1,32 @@
 import { Box, Flex, Heading, Stack, Text, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { ChevronRightIcon } from "@chakra-ui/icons";
+import { ChevronRightIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 
-export default function Ensino() {
+export default function Devs() {
   return (
     <Flex
-      align="center"
-      justify={{ base: "center", md: "space-around", xl: "space-between" }}
+      justifyContent="center"
       direction={{ base: "column-reverse", md: "row" }}
       wrap="no-wrap"
-      p={8}
-      mb={10}
+      mb={2}
+      minW="full"
     >
-      <Stack spacing={2}>
-        <Heading alignSelf="left">Sistemas Desenvolvidos</Heading>
+      <Stack
+        minW="80%"
+        spacing={4}
+        border="2px"
+        borderStyle="dashed"
+        borderColor="gray.200"
+        py={{ base: 2, md: 4 }}
+        px={{ base: 4, md: 8 }}
+      >
+        <Heading>Sistemas Desenvolvidos</Heading>
+        <Text fontSize="md" color="primary.800">
+          Exemplos feitos em sala
+        </Text>
+
         <Box
-          mt={10}
+          area={"dev"}
           bg="gray.100"
           border="1px"
           borderColor="gray.200"
@@ -23,9 +34,10 @@ export default function Ensino() {
           maxW="450px"
           maxH="500px"
           borderRadius="8px"
-          p={8}
+          p={4}
+          margin="0 auto"
         >
-          <NextLink href="/projetos/quiz" passHref>
+          <NextLink href="/devs/quiz" passHref>
             <Link>
               <Box>
                 <Heading as="h3" size="sm" color="primary.500">

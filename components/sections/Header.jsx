@@ -13,15 +13,12 @@ const MenuItems = (props) => {
       mb={{ base: isLast ? 0 : 8, sm: 0 }}
       mr={{ base: 0, sm: isLast ? 0 : 8 }}
       display="block"
+      color="primary.100"
       {...rest}
     >
       <NextLink href={to} passHref>
-        <Link
-          isExternal={isExternal}
-          display="inline-flex"
-          alignItems="center"
-        >
-          <Icon as={iconName} w={5} h={5} mr={1}/>
+        <Link isExternal={isExternal} display="inline-flex" alignItems="center">
+          <Icon as={iconName} w={5} h={5} mr={1} />
           {children}
         </Link>
       </NextLink>
@@ -32,6 +29,7 @@ const MenuItems = (props) => {
 export default function Header(props) {
   const [show, setShow] = useState(false);
   const toggleMenu = () => setShow(!show);
+  const bgImage = "/images/bg-header.png";
 
   return (
     <Flex
@@ -40,8 +38,9 @@ export default function Header(props) {
       justify="space-between"
       wrap="wrap"
       w="100%"
-      p={4}
-      bg={["primary.300", "primary.300", "transparent", "transparent"]}
+      px={2}
+      mb={1}
+      bg={"linear-gradient(rgba(10, 39, 51, 1),rgba(18, 69, 89,.85))"}
       color={["white", "white", "primary.700", "primary.700"]}
       {...props}
     >
@@ -53,7 +52,7 @@ export default function Header(props) {
       </Flex>
 
       <Box display={{ base: "block", md: "none" }} onClick={toggleMenu}>
-        {show ? <CloseIcon /> : <HamburgerIcon w={7} h={7}/>}
+        {show ? <CloseIcon /> : <HamburgerIcon w={7} h={7} />}
       </Box>
 
       <Box

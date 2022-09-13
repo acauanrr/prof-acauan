@@ -17,5 +17,8 @@ export const theme = extendTheme({
       800: "#023e8a",
       900: "#03045e",
     },
+    paletaCool: {
+      "bg": "#124559",
+    }
   },
 });
